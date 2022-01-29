@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>button_violet_pause.png</file>
+        <file>button_violet_play.png</file>
+        <file>button_violet_stop.png</file>
+        <file>icons8-open-64.png</file>
+        <file>icons8-open-view-48.png</file>
+    </qresource>
+</RCC>

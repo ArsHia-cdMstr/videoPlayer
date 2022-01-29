@@ -6,17 +6,69 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>623</width>
+    <height>416</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionopen"/>
+   <addaction name="actionplay"/>
+   <addaction name="actionpause"/>
+   <addaction name="actionstop"/>
+  </widget>
+  <action name="actionopen">
+   <property name="icon">
+    <iconset resource="icons/icons.qrc">
+     <normaloff>:/images/icons8-open-view-48.png</normaloff>:/images/icons8-open-view-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionpause">
+   <property name="icon">
+    <iconset resource="icons/icons.qrc">
+     <normaloff>:/images/button_violet_pause.png</normaloff>:/images/button_violet_pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>pause</string>
+   </property>
+  </action>
+  <action name="actionplay">
+   <property name="icon">
+    <iconset resource="icons/icons.qrc">
+     <normaloff>:/images/button_violet_play.png</normaloff>:/images/button_violet_play.png</iconset>
+   </property>
+   <property name="text">
+    <string>play</string>
+   </property>
+  </action>
+  <action name="actionstop">
+   <property name="icon">
+    <iconset resource="icons/icons.qrc">
+     <normaloff>:/images/button_violet_stop.png</normaloff>:/images/button_violet_stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>stop</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
