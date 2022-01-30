@@ -1,4 +1,4 @@
-QT       += core gui multimedia multimediawidgets
+QT       += core gui multimedia multimediawidgets widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,10 +10,12 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    videoWidget.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    videoWidget.h
 
 FORMS += \
     mainwindow.ui

@@ -6,15 +6,75 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>623</width>
-    <height>416</height>
+    <width>667</width>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>0</y>
+      <width>441</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="display"/>
+   </widget>
+   <widget class="QSlider" name="durationSlider">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>330</y>
+      <width>441</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>123456789abcdefaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>123456789abcdefaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>afds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>adsf</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>asdf</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
@@ -29,6 +89,7 @@
    <addaction name="actionplay"/>
    <addaction name="actionpause"/>
    <addaction name="actionstop"/>
+   <addaction name="actionfullscreen"/>
   </widget>
   <action name="actionopen">
    <property name="icon">
@@ -64,6 +125,15 @@
    </property>
    <property name="text">
     <string>stop</string>
+   </property>
+  </action>
+  <action name="actionfullscreen">
+   <property name="icon">
+    <iconset resource="icons/icons.qrc">
+     <normaloff>:/images/icons8-expand-49.png</normaloff>:/images/icons8-expand-49.png</iconset>
+   </property>
+   <property name="text">
+    <string>fullscreen</string>
    </property>
   </action>
  </widget>

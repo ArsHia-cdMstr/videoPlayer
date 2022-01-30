@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "videoWidget.h"
+#include <QPushButton>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,11 +11,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     player = new QMediaPlayer(this);
-    vw = new QVideoWidget(this);
-//    vw->setGeometry(10,10,600,200);
-
+    vw = new VideoWidget(this);
     player->setVideoOutput(vw);
-    this->setCentralWidget(vw);
+    ui->display->addWidget(vw);
+
+    connect(player ,&QMediaPlayer::durationChanged ,ui->durationSlider ,&QSlider::setMaximum);
+    connect(player ,&QMediaPlayer::positionChanged ,ui->durationSlider ,&QSlider::setValue);
+    connect(ui->durationSlider ,&QSlider::sliderMoved ,player ,&QMediaPlayer::setPosition);
+    ui->durationSlider->setRange(0,player->duration()/1000);
 
 
 }
@@ -50,3 +56,8 @@ void MainWindow::on_actionopen_triggered()
 
 }
 
+
+void MainWindow::on_actionfullscreen_triggered()
+{
+    vw->setFullScreen(true);
+}

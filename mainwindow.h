@@ -6,6 +6,9 @@
 #include <QVideoWidget>
 #include <QFileDialog>
 #include <QSlider>
+#include <QProgressBar>
+#include <QBoxLayout>
+#include <QGroupBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,8 +32,11 @@ private slots:
 
     void on_actionopen_triggered();
 
+    void on_actionfullscreen_triggered();
+
 private:
     Ui::MainWindow *ui;
+
     QMediaPlayer* player;
     QVideoWidget* vw;
 
