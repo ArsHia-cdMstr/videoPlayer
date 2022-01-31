@@ -1,7 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "videoWidget.h"
+#include "color.h"
 #include <QPushButton>
+#include <QStyle>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -18,7 +20,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(player ,&QMediaPlayer::durationChanged ,ui->durationSlider ,&QSlider::setMaximum);
     connect(player ,&QMediaPlayer::positionChanged ,ui->durationSlider ,&QSlider::setValue);
     connect(ui->durationSlider ,&QSlider::sliderMoved ,player ,&QMediaPlayer::setPosition);
-    ui->durationSlider->setRange(0,player->duration()/1000);
+
+    ui->soundButton->setIcon(style()->standardIcon(QStyle::SP_MediaVolume));
+
+    ui->soundSlider->setRange(0 , 100);
 
 
 }
@@ -26,6 +31,9 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete colorWindow;
+    delete player;
+    delete vw;
 }
 
 void MainWindow::on_actionstop_triggered()
@@ -61,3 +69,36 @@ void MainWindow::on_actionfullscreen_triggered()
 {
     vw->setFullScreen(true);
 }
+
+
+void MainWindow::on_soundButton_clicked()
+{
+    if (muted)
+    {
+        player->setMuted(!muted);
+        ui->soundButton->setIcon(style()->standardIcon(QStyle::SP_MediaVolume));
+    }else{
+        player->setMuted(!muted);
+        ui->soundButton->setIcon(style()->standardIcon(QStyle::SP_MediaVolumeMuted));
+    }
+
+    muted = !muted;
+}
+
+
+void MainWindow::on_soundSlider_valueChanged(int value)
+{
+     player->setVolume(value);
+}
+
+
+
+
+
+void MainWindow::on_colorButton_clicked()
+{
+    colorWindow = new color(this);
+//    colorWindow->transfer(player, vw);
+    colorWindow->show();
+}
+

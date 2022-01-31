@@ -9,15 +9,18 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    color.cpp \
     main.cpp \
     mainwindow.cpp \
     videoWidget.cpp
 
 HEADERS += \
+    color.h \
     mainwindow.h \
     videoWidget.h
 
 FORMS += \
+    color.ui \
     mainwindow.ui
 
 # Default rules for deployment.
