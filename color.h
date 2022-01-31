@@ -17,7 +17,7 @@ public:
     explicit color(QWidget *parent = nullptr);
     ~color();
 
-    void transfer(QMediaPlayer* , QVideoWidget*);
+    void transfer(QVideoWidget*);
 
 private slots:
 
@@ -27,7 +27,6 @@ private slots:
 
 private:
     Ui::color *ui;
-    QMediaPlayer* player;
     QVideoWidget* vw;
 };
 

@@ -13,9 +13,8 @@ color::~color()
     delete ui;
 }
 
-void color::transfer(QMediaPlayer* pl, QVideoWidget* v)
+void color::transfer( QVideoWidget* v)
 {
-    player = pl;
     vw = v;
 
     connect(ui->Bslider, &QSlider::sliderMoved, vw, &QVideoWidget::setBrightness);
@@ -38,8 +37,12 @@ void color::transfer(QMediaPlayer* pl, QVideoWidget* v)
 void color::on_resetButton_clicked()
 {
     ui->Bslider->setValue(0);
+    vw->setBrightness(0);
     ui->Cslider->setValue(0);
+    vw->setContrast(0);
     ui->Hslider->setValue(0);
+    vw->setHue(0);
     ui->Sslider->setValue(0);
+    vw->setSaturation(0);
 }
 

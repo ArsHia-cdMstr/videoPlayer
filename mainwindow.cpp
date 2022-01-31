@@ -59,6 +59,8 @@ void MainWindow::on_actionopen_triggered()
     QString fileName = QFileDialog::getOpenFileName(this,"open a file", "" , "video file(*.*)");
     on_actionstop_triggered();
 
+    ui->playlist->addItem(fileName);
+
     player->setMedia(QUrl::fromLocalFile(fileName));
     on_actionplay_triggered();
 
@@ -98,7 +100,14 @@ void MainWindow::on_soundSlider_valueChanged(int value)
 void MainWindow::on_colorButton_clicked()
 {
     colorWindow = new color(this);
-//    colorWindow->transfer(player, vw);
+    colorWindow->transfer(vw);
     colorWindow->show();
+}
+
+
+void MainWindow::on_playlist_currentIndexChanged(const QString &arg1)
+{
+    player->setMedia(QUrl::fromLocalFile(arg1));
+    on_actionplay_triggered();
 }
 

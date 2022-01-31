@@ -43,6 +43,8 @@ private slots:
 
     void on_colorButton_clicked();
 
+    void on_playlist_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 

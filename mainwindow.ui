@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>667</width>
-    <height>444</height>
+    <height>420</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,47 +38,30 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="playlist">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>360</y>
-      <width>631</width>
+      <y>330</y>
+      <width>651</width>
       <height>31</height>
      </rect>
     </property>
     <property name="currentText">
-     <string>123456789abcdefaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
+     <string/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>-1</number>
     </property>
-    <item>
-     <property name="text">
-      <string>123456789abcdefaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>afds</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>adsf</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>asdf</string>
-     </property>
-    </item>
+    <property name="maxVisibleItems">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QToolButton" name="soundButton">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
+      <y>290</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -91,10 +74,13 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>326</y>
+      <y>300</y>
       <width>171</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="value">
+     <number>99</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -103,8 +89,8 @@
    <widget class="QPushButton" name="colorButton">
     <property name="geometry">
      <rect>
-      <x>549</x>
-      <y>330</y>
+      <x>560</x>
+      <y>300</y>
       <width>91</width>
       <height>21</height>
      </rect>
