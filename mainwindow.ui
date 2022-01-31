@@ -6,9 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>420</height>
+    <width>743</width>
+    <height>464</height>
    </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -19,7 +28,7 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>651</width>
+      <width>721</width>
       <height>261</height>
      </rect>
     </property>
@@ -30,7 +39,7 @@
      <rect>
       <x>10</x>
       <y>270</y>
-      <width>651</width>
+      <width>711</width>
       <height>20</height>
      </rect>
     </property>
@@ -38,12 +47,12 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QComboBox" name="playlist">
+   <widget class="QComboBox" name="playlistN">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>50</x>
       <y>330</y>
-      <width>651</width>
+      <width>671</width>
       <height>31</height>
      </rect>
     </property>
@@ -89,7 +98,7 @@
    <widget class="QPushButton" name="colorButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>630</x>
       <y>300</y>
       <width>91</width>
       <height>21</height>
@@ -97,6 +106,60 @@
     </property>
     <property name="text">
      <string>color setting</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>380</y>
+      <width>671</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>paste the URL here</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>name :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>URL:</string>
     </property>
    </widget>
   </widget>

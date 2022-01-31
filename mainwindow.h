@@ -43,7 +43,13 @@ private slots:
 
     void on_colorButton_clicked();
 
-    void on_playlist_currentIndexChanged(const QString &arg1);
+    void on_lineEdit_textChanged(const QString &arg1);
+
+    void on_actionpast_triggered();
+
+    void on_actionnext_triggered();
+
+    void on_playlistN_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;
@@ -52,6 +58,9 @@ private:
     QVideoWidget* vw;
     bool muted = false ;
     color* colorWindow ;
+
+    QUrl filenames [100] ;
+    int lastIndex = 0 ;
 
 };
 #endif // MAINWINDOW_H
